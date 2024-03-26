@@ -386,3 +386,10 @@ fabric.properties
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
 
+/.idea/copilot/chatSessions/00000000000.xd
+/.idea/git_toolbox_prj.xml
+/go/.idea/git_toolbox_prj.xml
+/.idea/copilot/chatSessions/blobs/version
+/.idea/webResources.xml
+/go/.idea/webResources.xml
+/.idea/copilot/chatSessions/xd.lck
