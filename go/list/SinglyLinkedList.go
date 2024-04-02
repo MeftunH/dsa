@@ -20,5 +20,18 @@ func Print(root *Node) {
 		fmt.Println(nodeWalk.Value)
 		nodeWalk = nodeWalk.Next
 	}
+	x := []int{1, 2, 3}
+	x = append([]int{0}, x...)
+	fmt.Println(x)
 	fmt.Println(nodeWalk.Value)
+}
+func Len(root *Node) int {
+	nodeWalk := root
+	count := 1
+	for nodeWalk.Next != nil {
+		count = count + 1
+		nodeWalk = nodeWalk.Next
+	}
+
+	return count
 }
