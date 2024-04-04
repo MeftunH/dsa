@@ -49,3 +49,19 @@ def drop_table(table_name):
 def insert(table_name, columns, values):
     query = f'INSERT INTO {table_name} ({columns}) VALUES ({values})'
     execute(query)
+
+def select(table_name, columns, condition=None):
+    if condition:
+        query = f'SELECT {columns} FROM {table_name} WHERE {condition}'
+    else:
+        query = f'SELECT {columns} FROM {table_name}'
+    return fetchall(query)
+
+def update(table_name, set, condition):
+    query = f'UPDATE {table_name} SET {set} WHERE {condition}'
+    execute(query)
+
+def delete(table_name, condition):
+    query = f'DELETE FROM {table_name} WHERE {condition}'
+    execute(query)
+
