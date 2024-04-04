@@ -41,3 +41,11 @@ def close():
 def create_table(table_name, columns):
     query = f'CREATE TABLE {table_name} ({columns})'
     execute(query)
+
+def drop_table(table_name):
+    query = f'DROP TABLE {table_name}'
+    execute(query)
+
+def insert(table_name, columns, values):
+    query = f'INSERT INTO {table_name} ({columns}) VALUES ({values})'
+    execute(query)
