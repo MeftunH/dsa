@@ -37,3 +37,7 @@ def fetchall(query, args=None):
 def close():
     get_cursor().close()
     connect().close()
+
+def create_table(table_name, columns):
+    query = f'CREATE TABLE {table_name} ({columns})'
+    execute(query)
