@@ -65,3 +65,12 @@ def delete(table_name, condition):
     query = f'DELETE FROM {table_name} WHERE {condition}'
     execute(query)
 
+
+def main():
+    create_table('users', 'id INTEGER PRIMARY KEY, name TEXT, email TEXT')
+    insert('users', 'name, email', 'John Doe')
+    select('users', '*', 'name="John Doe"')
+
+
+if __name__ == '__main__':
+    main()
