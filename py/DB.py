@@ -8,7 +8,7 @@ def connect():
     if interface == 'sqlite':
         return sqlite3.connect(db)
     elif interface == 'mysql':
-        return MySQLdb.connect(host='localhost', user
+        return MySQLdb.connect(host='localhost', user='username', passwd='password', db='database_name')
 
 def get_cursor():
     return connect().cursor()
