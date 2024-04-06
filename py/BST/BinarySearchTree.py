@@ -27,3 +27,12 @@ class BinarySearchTree(object):
     def search(self, data):
         return self._search(self.root, data)
 
+    def _search(self, node, data):
+        if not node:
+            return False
+        if data == node.data:
+            return True
+        elif data < node.data:
+            return self._search(node.left, data)
+        else:
+            return self._search(node.right, data)
